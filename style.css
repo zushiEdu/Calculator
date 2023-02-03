@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=IBM+Plex+Mono&display=swap");
+
+html {
+    font-family: "IBM Plex Mono", sans-serif;
+}
+
+.body {
+    display: grid;
+    flex-direction: column;
+    margin: 0;
+    background-color: #0F0F0F;
+}
+
+.top-bun{
+    margin-bottom: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+div {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding:1rem;
+}
+
+ul {
+    display: flex;
+    margin: auto;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.entry{
+    background-color: #272727;
+    border-radius: 5px;
+    
+}
+
+.sesame-seeds {
+    color: #fff;
+    margin-bottom: 1;
+}
+
+button{
+    border-style: hidden;
+    background-color: #272727;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+button:hover {
+    background-color:  #3f3f3f;
+}
+
+.fluff {
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+.bottom-bun {
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+canvas {
+    border-radius: 5%;    
+}
