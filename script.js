@@ -23,10 +23,11 @@ var pointerY = 0;
 var fps = 1;
 
 var equations = [];
+var polygons = [];
 
 function setup() {
     // for (var i = centerX * -1; i < centerX; i++) {
-    //     console.log(evalString(equation, i));
+    //     console.log(evalFunction(equation, i));
     // }
 }
 
@@ -43,7 +44,43 @@ function newPolynomial() {
     document.body.appendChild(div);
 }
 
-function evalString(equation, x) {
+function newPolygon() {
+    var element = document.createElement("p");
+    element.className = "fluff";
+    element.innerText = "p=";
+    element.id = `po${polygons.length}`;
+    polygons[polygons.length] = "";
+    element.contentEditable = true;
+
+    var div = document.getElementById("editables");
+    div.appendChild(element);
+    document.body.appendChild(div);
+}
+
+function evalPolygon(string) {
+    if (string[0] == "p" && string[1] == "=") {
+        string = string.replace("p=", "  ");
+        var list = string.split("),(");
+        for (var i = 0; i < list.length; i++) {
+            list[i] = list[i].replace("(", " ");
+            list[i] = list[i].replace(")", " ");
+            list[i] = list[i].trim();
+        }
+
+        for (var i = 0; i < list.length; i++) {
+            var points1 = list[i].split(",");
+            var points2;
+            if (i == list.length - 1) {
+                points2 = list[0].split(",");
+            } else {
+                points2 = list[i + 1].split(",");
+            }
+            drawLine(parseInt(points1[0]) + centerX, parseInt(points1[1]) * -1 + centerY, parseInt(points2[0]) + centerX, parseInt(points2[1]) * -1 + centerY, 255, 255, 255);
+        }
+    }
+}
+
+function evalFunction(equation, x) {
     if (equation[equation.length - 1] == "x" || !isNaN(equation[equation.length - 1])) {
         if (equation[0] == "y" && equation[1] == "=") {
             for (var i = 0; i < equation.length; i++) {
@@ -120,7 +157,11 @@ function update() {
         // Points of graph
         for (var i = 0; i < equations.length; i++) {
             equations[i] = document.getElementById(`eq${i}`).innerText;
-            drawPoint(x + centerX, evalString(equations[i], x) * -1 + centerY, 255, 255, 255);
+            drawPoint(x + centerX, evalFunction(equations[i], x) * -1 + centerY, 255, 255, 255);
+        }
+        for (var i = 0; i < polygons.length; i++) {
+            polygons[i] = document.getElementById(`po${i}`).innerText;
+            evalPolygon(polygons[i]);
         }
     }
 
