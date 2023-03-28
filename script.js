@@ -179,9 +179,9 @@ function linear_system(x, m, b) {
     return a * x + b;
 }
 
-function mouseClick() {}
+function mouseClick() { }
 
-function input(key) {}
+function input(key) { }
 
 // Zushi Package
 

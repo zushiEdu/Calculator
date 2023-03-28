@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Calculator</title>
-        <link rel="icon" type="image/x-icon" href="/Icons/Icon.png" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="icon" type="image/x-icon" href="/Icons/Icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <body class="body">
-        <div class="top-bun">
-            <h1 class="sesame-seeds">Calculator</h1>
-            <button class="screenshot" onclick="screenshot()"><p class="fluff" style="margin: 0">Take screenshot</p></button>
-            <button class="Add Polynomial" onclick="newPolynomial()"><p class="fluff" style="margin: 0">New Polynomial</p></button>
-            <button class="Add Polygon" onclick="newPolygon()"><p class="fluff" style="margin: 0">New Polygon</p></button>
+  <body class="body">
+    <div class="top-bun">
+      <h1 class="sesame-seeds">Calculator</h1>
+      <button class="screenshot" onclick="screenshot()">
+        <p class="fluff" style="margin: 0">Take screenshot</p>
+      </button>
+      <button class="Add Polynomial" onclick="newPolynomial()">
+        <p class="fluff" style="margin: 0">New Polynomial</p>
+      </button>
+      <button class="Add Polygon" onclick="newPolygon()">
+        <p class="fluff" style="margin: 0">New Polygon</p>
+      </button>
 
-            <p class="fluff">update description</p>
-        </div>
-
-        <div class="entry" id="editables">
-            <ul>
-                <canvas id="main" width="256" height="256"></canvas>
-            </ul>
-        </div>
-
-        <script src="/script.js"></script>
-    </body>
-
-    <div class="bottom-bun">
-        <ul>
-            <p class="fluff" style="margin-top: auto; margin-bottom: auto">Started By Ethan Huber On 02/02/23</p>
-            <button href="https://zushidev.github.io"><p class="fluff" style="margin: 0">Website</p></button>
-            <button href="https://github.com/zushiEdu/Calculator"><p class="fluff" style="margin: 0">Calculator Repo</p></button>
-            <button href="https://github.com/zushiEdu/"><p class="fluff" style="margin: 0">Github</p></button>
-        </ul>
+      <p class="fluff">update description</p>
     </div>
+
+    <div class="entry" id="editables">
+      <ul>
+        <canvas id="main" width="256" height="256"></canvas>
+      </ul>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+
+  <div class="bottom-bun">
+    <ul>
+      <p class="fluff" style="margin-top: auto; margin-bottom: auto">
+        Started By Ethan Huber On 02/02/23
+      </p>
+      <button>
+        <a href="https://zushidev.github.io" class="fluff" style="margin: 0"
+          >Website</a
+        >
+      </button>
+      <button>
+        <a
+          href="https://github.com/zushiEdu/Calculator"
+          class="fluff"
+          style="margin: 0"
+          >Calculator Repo</a
+        >
+      </button>
+      <button>
+        <a href="https://github.com/zushiEdu/" class="fluff" style="margin: 0"
+          >Github</a
+        >
+      </button>
+    </ul>
+  </div>
 </html>
